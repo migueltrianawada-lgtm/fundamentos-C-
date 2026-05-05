@@ -6,7 +6,7 @@ public class ProgramAluraCurso
     public static void Main(string[]args){
       
       string mensajenDeBoasVindas = "\nBoas vindas ao Sreen Sound";//Variveis Camel  Cases
-      List<string>ListaDasBandas = new List<string>{"U2","The Beatles,","Calipso"};//criando lista das bandas
+      List<string>ListaDasBandas = new List<string>{"U2","The Beatles,","Calypso","Metallica", "AC/DC", "Iron Maiden", "Guns N' Roses", "Led Zeppelin" };//criando lista das bandas
         void Exibirlogo()//Função Pascal Cases
         {
             Console.WriteLine(@"
@@ -40,9 +40,11 @@ public class ProgramAluraCurso
            void RegistrarBandas()
         {
             Console.Clear();
-            Console.WriteLine("************** ");
-            Console.WriteLine("Registo de bandas ");
-            Console.WriteLine("************** ");
+
+            ExibirTituloDaOpcao("Registo de bandas registradas na nossa aplicação");
+            //Console.WriteLine("************** ");
+            //Console.WriteLine("Registo de bandas ");
+            //Console.WriteLine("************** ");
             Console.Write("Digite o nome da banda que deseja registar :  ");
             string nomeDaBanda = Console.ReadLine()!;
             ListaDasBandas.Add(nomeDaBanda);
@@ -55,18 +57,35 @@ public class ProgramAluraCurso
         void MostrarBandasRegistradas()
         {
             Console.Clear();
-            Console.WriteLine("************** ");
-            Console.WriteLine("\nExibindo todas as Bandas ");
-            Console.WriteLine("\n************** ");
-            for(int i = 0; i < ListaDasBandas.Count; i++)
+
+            ExibirTituloDaOpcao("Exibindo todas as bandas registadas no nosso aplicativo");
+            //Console.WriteLine("************** ");
+            //Console.WriteLine("\nExibindo todas as Bandas ");
+            //Console.WriteLine("\n************** ");
+            //for(int i = 0; i < ListaDasBandas.Count; i++)
+            //{
+                //Console.Write($"Banda:\n {ListaDasBandas[i]}\n");
+           // }
+
+           foreach(string banda in ListaDasBandas)
             {
-                Console.Write($"Banda:\n {ListaDasBandas[i]}\n");
+                Console.Write($"Banda:\n {banda}\n");
             }
             Console.Write("Digite Uma tecla para retornar no menu ");
             Console.ReadKey();
             Console.Clear();
             ExibirOpcoesDoMenu();//chamando a função para retornar no menu
 
+
+        }
+
+        void ExibirTituloDaOpcao(string titulo)
+        {
+            int quantidadeDeLetras = titulo.Length;
+            string asteriscos = string.Empty.PadLeft(quantidadeDeLetras,'*');
+            Console.WriteLine(asteriscos);
+            Console.WriteLine(titulo);
+            Console.WriteLine("\n" + asteriscos + "\n");
 
         }
 
