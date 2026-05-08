@@ -144,8 +144,10 @@ public class ProgramAluraCurso
         // Se a lista estiver vazia, o Average pode dar erro, então é bom verificar
         if (notas.Count > 0)
         {
-            double mediaDaBanda = notas.Average();
+            double mediaDaBanda = notas.Average();//metodo Average exibe a media
             Console.WriteLine($"\nA média da banda {nomeDaBanda} é: {mediaDaBanda:F2}");
+            Console.WriteLine("Digite uma tecla para voltar ao menu principal!");
+            Console.ReadKey();
             Thread.Sleep(2000);
             Console.Clear();
             ExibirOpcoesDoMenu();
