@@ -14,7 +14,7 @@ public class ProgramAluraCurso
     {
         // Adicionando dados iniciais
         bandasRegistradas.Add("Linkin Park", new List<int> { 10, 8, 6 });
-        bandasRegistradas.Add("Jota Quest", new List<int> { 10, 9, 7 });
+        bandasRegistradas.Add("Bob Marley", new List<int> { 10, 9, 7 });
 
         ExibirOpcoesDoMenu();
     }
