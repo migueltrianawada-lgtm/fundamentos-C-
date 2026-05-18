@@ -9,7 +9,7 @@ public class Exercicios2
         Console.WriteLine("Digite o Valor da venda (ou 0 para encerrar ) : ");
         double valorDaVenda = double.Parse(Console.ReadLine(),CultureInfo.CurrentCulture);
 
-        while(valorDaVenda > 0)
+        while(valorDaVenda != 0)
 
         {
 
